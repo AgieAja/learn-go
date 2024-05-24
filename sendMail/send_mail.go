@@ -14,7 +14,7 @@ func main() {
 	plainTextContent := "and easy to do anywhere, even with Go"
 	htmlContent := "<strong>and easy to do anywhere, even with Go</strong>"
 	message := mail.NewSingleEmail(from, subject, to, plainTextContent, htmlContent)
-	client := sendgrid.NewSendClient("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")
+	client := sendgrid.NewSendClient("")
 	response, err := client.Send(message)
 	if err != nil {
 		log.Println(err)
